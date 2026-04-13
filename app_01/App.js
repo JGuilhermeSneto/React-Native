@@ -1,38 +1,57 @@
-import { View,Text,StyleSheet } from "react-native"
+import { View, Text, StyleSheet } from "react-native";
 
-/*
- Função básica precisa de default pode ser nomeada, sem nome e arrow function
- */
-
-
-export default function App(){
+export default function App() {
   return (
-    <View style={estilo_2.tela}>
-      {
-        /**
-         * VIEW e TEXT são componentes da biblioteca do React Native 
-         */
-      }
-      <Text>Bom dia</Text>
-      <Text style={{color:'red'}}>Oi</Text>
-      <Text style={estilo_1}>IFRN</Text>
-      <Text style={estilo_2.texto}>TSI</Text>
+    <View style={styles.container}>
+      <View style={styles.card}>
+        <Text style={styles.titulo}>Bom dia ☀️</Text>
+        <Text style={styles.subtitulo}>Oi 👋</Text>
+        <Text style={styles.ifrn}>IFRN</Text>
+        <Text style={styles.curso}>TSI</Text>
+      </View>
     </View>
   );
 }
 
-const estilo_1 = {
-  color:'blue',
-  fontSize: 90
-}
-
-
-const estilo_2 = StyleSheet.create({
-  tela: {
-    backgroundColor: 'green',
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#0f172a", // fundo escuro elegante
+    justifyContent: "center",
+    alignItems: "center",
   },
-  texto: {
-    fontWeight: 'bold',
-    color: 'pink'
-  }
-})
+
+  card: {
+    backgroundColor: "#1e293b",
+    padding: 24,
+    borderRadius: 16,
+    width: "80%",
+    alignItems: "center",
+    elevation: 6, // sombra Android
+  },
+
+  titulo: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#38bdf8",
+    marginBottom: 8,
+  },
+
+  subtitulo: {
+    fontSize: 18,
+    color: "#e5e7eb",
+    marginBottom: 16,
+  },
+
+  ifrn: {
+    fontSize: 42,
+    fontWeight: "bold",
+    color: "#22c55e",
+  },
+
+  curso: {
+    fontSize: 20,
+    color: "#f472b6",
+    marginTop: 4,
+  },
+});
